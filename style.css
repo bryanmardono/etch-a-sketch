@@ -1,0 +1,27 @@
+body {
+    background-color: #ededed;
+    color: #333;
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+button {
+    font-family: 'Raleway';
+}
+
+.grid-8 {
+    grid-template-columns: repeat(8, 47px);
+}
+
+.grid-16 {
+    grid-template-columns: repeat(16, 23px);
+}
+
+.grid-32 {
+    grid-template-columns: repeat(32, 12px);
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-gap: 1px;
+}
