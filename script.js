@@ -3,6 +3,8 @@ const defaultMode = 'color';
 
 let currentColor = defaultColor;
 let currentMode = defaultMode;
+let currentDivSize;
+let currentClassName;
 
 const colorPicker = document.querySelector('.colorPicker');
 const colorBtn = document.querySelector('.colorBtn');
@@ -34,6 +36,8 @@ function generateGrid(divSize = 16*16, className = 'grid-16') {
         grid.classList.add(className);
         grid.appendChild(gridDiv);
     }
+    currentDivSize = divSize;
+    currentClassName = className;
 }
 
 //function to choose grid size by clicking on the size picker buttons
@@ -56,4 +60,11 @@ function chooseGrid() {
     });
 }
 
-function
+function reloadGrid() {
+    generateGrid(currentDivSize, currentClassName);
+}
+
+clearBtn.onclick = () => reloadGrid();
+
+chooseGrid();
+generateGrid();
